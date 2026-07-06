@@ -1,8 +1,35 @@
+/* Página */
+body {
+  background-color: #eef1f5;
+}
+
+/* Tarjeta que contiene toda la app */
+.app-card {
+  width: fit-content;
+  max-width: 95vw;
+  margin: 48px auto;
+  padding: 32px 40px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
 /* Contador de segundos */
 .seconds-counter {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   background-color: #1a1a1a;
   padding: 20px;
   border-radius: 8px;
@@ -18,7 +45,13 @@
   width: 90px;
   height: 120px;
   border-radius: 6px;
-  margin-right: 6px;
+}
+
+.seconds-counter__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
 .seconds-counter__digit {
@@ -33,4 +66,112 @@
   width: 90px;
   height: 120px;
   border-radius: 6px;
+}
+
+/* Flechas ▲▼ para ajustar cada cifra (solo en el temporizador en pausa) */
+.seconds-counter__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 28px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.seconds-counter__arrow:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+/* Botón de play / pausa */
+.play-pause-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.25); /* gris claro translúcido */
+  color: #333333;
+  font-size: 28px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.play-pause-btn:hover {
+  background-color: rgba(128, 128, 128, 0.4);
+}
+
+/* Fila de controles debajo del contador */
+.counter-controls {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Pestañas de modo como control segmentado */
+.mode-selector {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  background-color: rgba(128, 128, 128, 0.15);
+  border-radius: 999px;
+}
+
+.mode-btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 999px;
+  background-color: transparent;
+  color: #666666;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.mode-btn:hover {
+  color: #1a1a1a;
+}
+
+.mode-btn--active {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.mode-btn--active:hover {
+  color: #ffffff;
+}
+
+/* Recuadro de input del temporizador */
+.timer-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.timer-input__label {
+  font-size: 16px;
+  color: #555555;
+}
+
+.timer-input__field {
+  width: 140px;
+  padding: 8px 12px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 8px;
+}
+
+.timer-input__field:focus {
+  outline: none;
+  border-color: #1a1a1a;
 }
