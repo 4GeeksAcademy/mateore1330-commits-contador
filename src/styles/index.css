@@ -1,11 +1,36 @@
-/* 
+/* Contador de segundos */
+.seconds-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.seconds-counter__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2b2b2b;
+  color: #ffffff;
+  font-size: 48px;
+  width: 90px;
+  height: 120px;
+  border-radius: 6px;
+  margin-right: 6px;
+}
 
-*/
+.seconds-counter__digit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2b2b2b;
+  color: #ffffff;
+  font-size: 72px;
+  font-weight: 700;
+  font-family: "Courier New", monospace;
+  width: 90px;
+  height: 120px;
+  border-radius: 6px;
+}
